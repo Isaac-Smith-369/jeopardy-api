@@ -11,5 +11,8 @@
         "src": "/(.*)",
         "dest": "app/api.py"
       }
-    ]
+    ],
+    "env": {
+      "APP_MODULE": "main:app"
+    }
   }
