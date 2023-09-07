@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "devCommand": "uvicorn main:app",
     "builds": [
       {
         "src": "/app/api.py",
@@ -12,5 +11,8 @@
         "src": "/(.*)",
         "dest": "app/api.py"
       }
-    ]
+    ],
+    "env": {
+      "APP_MODULE": "api:app"
+    }
   }
