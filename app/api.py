@@ -52,18 +52,18 @@ GET_JEOPARARDY_QUESTIONS = """
     ORDER BY value;
 """
 
-CWD = Path(__file__).parent.parent
-CSV_PATH = CWD / "data/jeopardy.csv"
-DB_PATH = CWD / "data/jeopardy.db"
+# CWD = Path(__file__).parent.parent
+# CSV_PATH = CWD / "data/jeopardy.csv"
+# DB_PATH = CWD / "data/jeopardy.db"
 
 
-def game():
-    result = get_jeopardy_round(GET_JEOPARDY_CATEGORIES, GET_JEOPARARDY_QUESTIONS, DB_PATH)
-    if result is None:
-        logging.warning("No questions available")
-        return
-    game = Game.model_validate(result)
-    return game
+# def game():
+#     result = get_jeopardy_round(GET_JEOPARDY_CATEGORIES, GET_JEOPARARDY_QUESTIONS, DB_PATH)
+#     if result is None:
+#         logging.warning("No questions available")
+#         return
+#     game = Game.model_validate(result)
+#     return game
 
 
 app = FastAPI()
@@ -73,6 +73,6 @@ app = FastAPI()
 def index():
     return "Welcome to jeopardy"
 
-@app.get("/game")
-def get_game():
-    return game()
+# @app.get("/game")
+# def get_game():
+#     return game()
