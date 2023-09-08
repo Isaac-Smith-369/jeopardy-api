@@ -1,8 +1,8 @@
-# from pathlib import Path
+from pathlib import Path
 # import logging
 # from app.models import Game
 # from app.queries import get_jeopardy_round
-# from fastapi import FastAPI
+from fastapi import FastAPI
 
 # logging.basicConfig()
 # logger = logging.getLogger(__name__)
@@ -22,12 +22,12 @@
 #     return game
 
 
-# app = FastAPI()
+app = FastAPI()
 
 
-# @app.get("/")
-# def index():
-#     return "Welcome to jeopardy"
+@app.get("/")
+def index():
+    return "Welcome to jeopardy"
 
 # @app.get("/game")
 # def get_game():
