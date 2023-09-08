@@ -9,7 +9,10 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/app/api.py"
+        "dest": "app/api.py"
       }
-    ]
+    ],
+    "env": {
+      "APP_MODULE": "app.api:app"
+    }
   }
