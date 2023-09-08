@@ -1,7 +1,7 @@
 # from pathlib import Path
 import logging
 from app.models import Game
-from app.queries import get_jeopardy_round
+# from app.queries import get_jeopardy_round
 from fastapi import FastAPI
 
 logging.basicConfig()
