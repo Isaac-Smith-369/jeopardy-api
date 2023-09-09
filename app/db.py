@@ -1,7 +1,6 @@
 import sqlite3
 
-
-class DB:
+class DevDB:
 
     def __init__(self, file: str = ""):
         self.file = file

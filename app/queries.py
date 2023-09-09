@@ -1,13 +1,12 @@
 import logging
-from app.db import DB
+from app.db import DevDB
 from pathlib import Path
 from typing import Any
 from app.models import Question
 
-
 def get_jeopardy_data(query: str, source: Path, limit: int = 2) -> list[tuple[Any]] | None:
     logging.info("Retrieving jeopardy data")
-    with DB(str(source)) as (_, cursor):
+    with DevDB(str(source)) as (_, cursor):
         try:
             cursor.execute(query)
             result = cursor.fetchmany(limit)
@@ -18,7 +17,7 @@ def get_jeopardy_data(query: str, source: Path, limit: int = 2) -> list[tuple[An
 
 def get_jeopardy_questions(query: str, source: Path, category: tuple[str], limit: int = 2) -> list[Question] | None:
     logging.info("Retrieving jeopardy questions")
-    with DB(str(source)) as (_, cursor):
+    with DevDB(str(source)) as (_, cursor):
         try:
             cursor.execute(query, category)
             result = cursor.fetchmany(limit)
@@ -26,7 +25,6 @@ def get_jeopardy_questions(query: str, source: Path, category: tuple[str], limit
             return questions
         except Exception:
             logging.exception("Failed to retrieve jeopardy questions")
-
 
 def get_jeopardy_round(source: Path) -> dict[str, list[list[Question]] | int] | None:
     GET_JEOPARDY_CATEGORIES = """
@@ -70,4 +68,3 @@ def get_jeopardy_round(source: Path) -> dict[str, list[list[Question]] | int] | 
         count += len(questions_set)
 
     return dict(questions=questions, question_count=count)
-
