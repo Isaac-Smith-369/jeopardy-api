@@ -1,6 +1,6 @@
-# Jeopardy! API
+# Quizriot API
 
-Jeopardy Trivia API is a Python-based API built with FastAPI, designed to provide trivia questions in the format of the Jeopardy Jeopardy! TV show.
+Quizriot API is a Python-based API built with FastAPI, designed to provide trivia questions in the format of the Jeopardy Jeopardy! TV show.
 
 ## Features
 
@@ -12,7 +12,7 @@ Jeopardy Trivia API is a Python-based API built with FastAPI, designed to provid
 
 ## Getting Started
 
-To get started with the Jeopardy! API:
+To get started with the Quizriot API:
 
 1. Clone the repository to your local machine.
 2. Install the required dependencies using `pip install -r requirements.txt`.
@@ -28,4 +28,4 @@ The API provides the following endpoints:
 
 ## Contributing
 
-Contributions to the Jeopardy Trivia API are welcome!
+Contributions to the Quizriot API are welcome!
