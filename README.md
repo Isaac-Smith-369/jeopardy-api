@@ -1,6 +1,6 @@
 # Quizriot API
 
-Quizriot API is a Python-based API built with FastAPI, designed to provide trivia questions in the format of the Jeopardy Jeopardy! TV show.
+Quizriot API is a Python-based API built with FastAPI, designed to provide trivia questions in the format of the Jeopardy! TV show.
 
 ## Features
 
